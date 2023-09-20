@@ -6,5 +6,5 @@ inputs:
   tag:
     description: "The tag text"
 runs:
-  using: "node20"
+  using: "node16"
   main: "lib/main.js"
