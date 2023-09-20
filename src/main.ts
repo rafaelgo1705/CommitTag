@@ -1,5 +1,5 @@
-import core from "@actions/core";
-import github from "@actions/github/lib/utils";
+import * as core from "@actions/core";
+import * as github from "@actions/github/lib/utils";
 
 async function run(): Promise<void> {
   try {
