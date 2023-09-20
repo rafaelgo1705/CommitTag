@@ -1,0 +1,10 @@
+name: Commit Tag
+description: Tag for commit version
+inputs:
+  repo-token:
+    description: "The github secret token"
+  tag:
+    description: "The tag text"
+runs:
+  using: "node18"
+  main: "lib/main.js"
