@@ -1,24 +1,24 @@
-import * as core from "@actions/core";
+// import core from "@actions/core";
 import github from "@actions/github/lib/utils";
 
 async function run(): Promise<void> {
   try {
-    const token = core.getInput("repo-token", { required: true });
-    const tag = core.getInput("tag", { required: true });
+    // const token = core.getInput("repo-token", { required: true });
+    // const tag = core.getInput("tag", { required: true });
     const sha = github.context.sha;
 
-    const client = new github.GitHub({ auth: token });
+    // const client = new github.GitHub({ auth: token });
 
-    core.debug(`Tagging #${sha} with tag ${tag}`);
-    await client.rest.git.createRef({
-      owner: github.context.repo.owner,
-      repo: github.context.repo.repo,
-      ref: `refs/tags/${tag}`,
-      sha: sha,
-    });
+    // core.debug(`Tagging #${sha} with tag ${tag}`);
+    // await client.rest.git.createRef({
+    //   owner: github.context.repo.owner,
+    //   repo: github.context.repo.repo,
+    //   ref: `refs/tags/${tag}`,
+    //   sha: sha,
+    // });
   } catch (error: any) {
-    core.error(error);
-    core.setFailed(error.message);
+    // core.error(error);
+    // core.setFailed(error.message);
   }
 }
 
