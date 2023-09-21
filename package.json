@@ -1,14 +1,13 @@
 {
   "name": "commit-tag",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "index.js",
   "repository": "git@github.com:rafaelgo1705/commit-tag.git",
   "author": "Rafael Gomes",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "commit-node-modules": "git add node_modules/* && git commit -m \"Node modules path\"",
-    "commit-tag": "git add . && yarn version --patch && git push --follow-tags && git push --follow-tags && npm commit-node-modules"
+    "commit-tag": "git add . && yarn version --patch && git push --follow-tags && git push --follow-tags && git add node_modules/* && git commit -m \"Node modules path\""
   },
   "dependencies": {
     "@actions/core": "^1.10.1",
