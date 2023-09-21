@@ -1,7 +1,7 @@
 name: Commit Tag
 description: Tag for commit version
 inputs:
-  repo-token:
+  secret-token:
     description: "The github secret token"
   tag:
     description: "The tag text"
